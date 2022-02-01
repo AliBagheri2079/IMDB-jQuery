@@ -1,0 +1,99 @@
+@import "stylus/*";
+
+//? Css Reset
+//* Based on [Eric Meyer's reset](http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/)
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td
+    reset-box-model()
+    reset-font()
+  body
+    reset-body()
+  ol, ul
+    list-style: none
+  table
+    reset-table()
+  caption, th, td
+    reset-table-cell()
+  a img
+    border: none
+
+  div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+  pre, a, abbr, acronym, address, code, del, dfn, em, img,
+  dl, dt, dd, ol, ul, li, fieldset, form, label,
+  legend, caption, tbody, tfoot, thead, tr
+    reset-box-model()
+    reset-font()
+  table
+    reset-table()
+  caption, th, td
+    reset-table-cell()
+  a img
+    border: none
+
+  article, aside, canvas, details, figcaption,
+  figure, footer, header, hgroup, menu, nav,
+  section, summary, main
+    reset-box-model()
+    display: block
+  audio, canvas, video
+    display inline-block
+    *display inline
+    *zoom 1
+  audio:not([controls]),[hidden]
+    display none
+//? Css Reset
+
+*
+    margin: 0
+    padding: 0
+    vendor("box-sizing", border-box)
+    font-family: Arial, Helvetica, sans-serif
+
+body
+    background-color: mainBlue
+
+.movie
+    margin: 15px
+
+.movie-header
+    max-width: 100%
+    height: auto
+
+.movie-header__poster
+    max-width: 90vw
+    vendor("border-radius", 5px)
+
+.movie-info
+    margin-top: 10px
+    > h1
+        color: mainYellow
+        font-size: 2em
+        font-weight: bold
+    > p
+        color: mainGray
+        font-size: 1em
+        text-align: justify
+        margin-top: 5px
+        text-indent: 10px
+
+
+//* for responsive
+.movie--container
+    display: flex
+    flex-direction: column
+
+@media screen and (min-width: 425px)
+    .movie--container
+        flex-flow: row nowrap
+
+    .movie-header__poster
+        max-width: 60vw
+
+    .movie-info
+        margin-left: 20px

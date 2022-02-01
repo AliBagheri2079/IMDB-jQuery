@@ -1,0 +1,170 @@
+@import "stylus/*";
+
+//? Css Reset
+//* Based on [Eric Meyer's reset](http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/)
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td
+    reset-box-model()
+    reset-font()
+  body
+    reset-body()
+  ol, ul
+    list-style: none
+  table
+    reset-table()
+  caption, th, td
+    reset-table-cell()
+  a img
+    border: none
+
+  div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+  pre, a, abbr, acronym, address, code, del, dfn, em, img,
+  dl, dt, dd, ol, ul, li, fieldset, form, label,
+  legend, caption, tbody, tfoot, thead, tr
+    reset-box-model()
+    reset-font()
+  table
+    reset-table()
+  caption, th, td
+    reset-table-cell()
+  a img
+    border: none
+
+  article, aside, canvas, details, figcaption,
+  figure, footer, header, hgroup, menu, nav,
+  section, summary, main
+    reset-box-model()
+    display: block
+  audio, canvas, video
+    display inline-block
+    *display inline
+    *zoom 1
+  audio:not([controls]),[hidden]
+    display none
+//? Css Reset
+
+*
+    margin: 0
+    padding: 0
+    vendor("box-sizing", border-box)
+    font-family: Arial, Helvetica, sans-serif
+
+input
+    font-family: Arial, Helvetica, sans-serif !important
+
+body
+    background-color: mainBlue
+
+//* header style
+.header-banner
+    background-image: url("../images/MovieClipart.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    max-width 100%
+    height: 60vmin
+    display: flex
+    flex-flow: row wrap
+
+.logo
+    margin-left: 10px
+    flex: 50%
+
+.logo__text
+    background-color: mainYellow
+    color: mainBlack
+    font: 10vmin bolder
+    text-decoration: none
+    display: inline-block
+    width: 30vmin
+    height: 12vmin
+    margin-top: 10px
+    padding-left: 2vmin
+    vendor('border-radius', 4px)
+    &:hover
+        color: mainGray
+
+.header-title
+    flex: 100%
+    color: mainBlue
+    text-shadow: 2px 2px 4px mainBlack
+    font-size: 11vmin
+    font-weight: bolder
+    text-transform: capitalize
+    text-align: center
+    margin-top: 1em
+
+.search-box
+    flex: 50%
+    align-self: flex-end
+    text-align: center
+
+.search-box__input
+    background-color: mainGray
+    color: mainBlue
+    width: 100vmin
+    font-size: 17px
+    border: none
+    outline: none
+    vendor('border-radius', 20px)
+    margin-bottom: 10px
+    padding: 10px 20px
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+//* section style
+.imdb-movies
+    display: flex
+    justify-content: space-around
+    align-content: flex-start
+    flex-direction: column
+    margin: 20px
+
+.item
+    flex: 1 1 200px
+    margin-bottom: 10px
+
+.item__poster
+    width: 200px
+    height: 250px
+    vendor("border-radius", 10px)
+
+//* image overlay
+.container 
+  position: relative
+  &:hover .overlay
+      height: 250px
+
+.overlay
+  position: absolute
+  bottom: 3px
+  left: 0
+  right: 0
+  background-color: mainYellow
+  opacity: .6
+  vendor("border-radius", 10px)
+  overflow: hidden
+  width: 200px
+  height: 0
+  transition: .5s ease
+  > p
+    white-space: nowrap 
+    overflow: hidden
+    text-overflow: ellipsis
+    width: 140px
+    text-align: center 
+    color: mainBlack
+    font-size: 20px
+    position: absolute
+    top: 50%
+    left: 50%
+    vendor("transform", translate(-50%, -50%))
+
+@media screen and (min-width: 425px)
+    .imdb-movies
+        flex-flow: row wrap

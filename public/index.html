@@ -8,10 +8,47 @@
     <meta name="description" content="Top 250 IMDB Movies" />
     <meta name="author" content="Ali Bagheri" />
     <link rel="icon" type="image/x-icon" href="images/imdb_icon.png" />
-    <link rel="stylesheet" href="css/index.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <title>Home - IMDB</title>
   </head>
   <body>
-    <h1>Hello IMDB</h1>
+    <!-- * Mobile First Design -->
+
+    <header class="header-banner">
+      <div class="logo">
+        <a href="https://www.imdb.com/" class="logo__text">IMDB</a>
+      </div>
+
+      <h1 class="header-title">top 250 movies</h1>
+
+      <div class="search-box">
+        <form autocomplete="off">
+          <input
+            type="search"
+            class="search-box__input"
+            placeholder="Search Movie"
+            name="smovie"
+            autofocus
+          />
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <section class="imdb-movies">
+        <div class="container item">
+          <a href="movie.html">
+            <img
+              src="images/12 Angry Men.jpg"
+              alt="Avatar"
+              class="item__poster"
+            />
+            <div class="overlay">
+              <p>Hello World</p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

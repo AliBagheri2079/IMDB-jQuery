@@ -1,15 +1,8 @@
-# imdb-frontend
---first pure code
---after use framework
---DarkMode - En Language
---use better comment extention
---complete this file based on this project
+# imdb-JQUERY
 
 # branches list
---html, css, stylus
---bulma, skeleton css
+--html, css, bem, stylus, bulma
 --js
 --jquery, jquery ui
---flow
 --quint
 --webpack, grunt, gulp
