@@ -276,18 +276,19 @@ body {
   -ms-border-radius: 10px;
   border-radius: 10px;
 }
-.my-container {
+.top-movie {
   position: relative;
+  display: none;
 }
-.my-container:hover .overlay {
+.top-movie:hover .overlay {
   height: 300px;
 }
 .overlay {
+  background-color: rgba(255,157,0,0.897);
   position: absolute;
   bottom: 3px;
   left: 0;
   right: 0;
-  background-color: rgba(255,157,0,0.897);
   opacity: 0.6;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;

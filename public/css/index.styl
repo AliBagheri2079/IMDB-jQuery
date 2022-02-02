@@ -134,17 +134,18 @@ body
     vendor("border-radius", 10px)
 
 //* image overlay
-.my-container 
-  position: relative
+.top-movie
+  position: relative 
+  display: none
   &:hover .overlay
       height: 300px
 
 .overlay
+  background-color: rgba(255, 157, 0, 0.897)
   position: absolute
   bottom: 3px
   left: 0
   right: 0
-  background-color: rgba(255, 157, 0, 0.897)
   opacity: .6
   vendor("border-radius", 10px)
   overflow: hidden
