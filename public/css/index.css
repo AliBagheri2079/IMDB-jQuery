@@ -230,10 +230,9 @@ body {
 }
 .header-title {
   flex: 100%;
-  color: #14213d;
+  color: #000;
   text-shadow: 2px 2px 4px #000;
   font-size: 11vmin;
-  font-weight: bolder;
   text-transform: capitalize;
   text-align: center;
   margin-top: 1em;
@@ -246,7 +245,7 @@ body {
 .search-box__input {
   background-color: #e5e5e5;
   color: #14213d;
-  width: 100vmin;
+  width: 90vmin;
   font-size: 17px;
   border: none;
   outline: none;
@@ -270,43 +269,39 @@ body {
   margin-bottom: 10px;
 }
 .item__poster {
-  width: 200px;
-  height: 250px;
+  width: 250px;
+  height: 300px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px;
 }
-.container {
+.my-container {
   position: relative;
 }
-.container:hover .overlay {
-  height: 250px;
+.my-container:hover .overlay {
+  height: 300px;
 }
 .overlay {
   position: absolute;
   bottom: 3px;
   left: 0;
   right: 0;
-  background-color: #fca311;
+  background-color: rgba(255,157,0,0.897);
   opacity: 0.6;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px;
   overflow: hidden;
-  width: 200px;
+  width: 250px;
   height: 0;
   transition: 0.5s ease;
 }
-.overlay > p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 140px;
+.overlay > h5 {
   text-align: center;
   color: #000;
-  font-size: 20px;
+  font: 22px bold;
   position: absolute;
   top: 50%;
   left: 50%;

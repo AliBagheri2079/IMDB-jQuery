@@ -92,10 +92,9 @@ body
 
 .header-title
     flex: 100%
-    color: mainBlue
+    color: mainBlack
     text-shadow: 2px 2px 4px mainBlack
     font-size: 11vmin
-    font-weight: bolder
     text-transform: capitalize
     text-align: center
     margin-top: 1em
@@ -108,7 +107,7 @@ body
 .search-box__input
     background-color: mainGray
     color: mainBlue
-    width: 100vmin
+    width: 90vmin
     font-size: 17px
     border: none
     outline: none
@@ -130,36 +129,32 @@ body
     margin-bottom: 10px
 
 .item__poster
-    width: 200px
-    height: 250px
+    width: 250px
+    height: 300px
     vendor("border-radius", 10px)
 
 //* image overlay
-.container 
+.my-container 
   position: relative
   &:hover .overlay
-      height: 250px
+      height: 300px
 
 .overlay
   position: absolute
   bottom: 3px
   left: 0
   right: 0
-  background-color: mainYellow
+  background-color: rgba(255, 157, 0, 0.897)
   opacity: .6
   vendor("border-radius", 10px)
   overflow: hidden
-  width: 200px
+  width: 250px
   height: 0
   transition: .5s ease
-  > p
-    white-space: nowrap 
-    overflow: hidden
-    text-overflow: ellipsis
-    width: 140px
+  > h5
     text-align: center 
     color: mainBlack
-    font-size: 20px
+    font: 22px bold
     position: absolute
     top: 50%
     left: 50%
