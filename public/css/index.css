@@ -213,11 +213,11 @@ body {
 .logo__text {
   background-color: #fca311;
   color: #000;
-  font: 10vmin bolder;
+  font: 8vmin bolder;
   text-decoration: none;
   display: inline-block;
-  width: 30vmin;
-  height: 12vmin;
+  width: 26vmin;
+  height: 10vmin;
   margin-top: 10px;
   padding-left: 2vmin;
   -webkit-border-radius: 4px;
@@ -278,7 +278,6 @@ body {
 }
 .top-movie {
   position: relative;
-  display: none;
 }
 .top-movie:hover .overlay {
   height: 300px;
